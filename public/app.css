@@ -1,0 +1,19 @@
+.jumbotron{
+  padding-bottom: 0;
+}
+
+.iphone {
+  background: transparent url(/iphone.png) no-repeat center calc(100% + 350px);
+  padding-bottom:300px;
+}
+
+@media (min-width: 768px) {
+  .iphone {
+    background: transparent url(/iphone.png) no-repeat 80% top;
+    padding-bottom:48px;
+  }
+}
+
+.bg-danger {
+  padding: 15px;
+}

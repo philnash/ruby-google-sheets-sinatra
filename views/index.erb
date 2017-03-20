@@ -1,0 +1,49 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Fancy new app!</h1>
+        <p>This is going to be really useful for you!</p>
+      </div>
+    </div>
+    <div class="row iphone">
+      <div class="col-md-4 col-sm-4">
+        <% if defined? error_message %>
+          <p class="bg-danger"><%= error_message %></p>
+        <% end %>
+        <form action="/" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" name="email" id="email">
+          </div>
+          <div class="form-group">
+            <label for="phone_number">Phone number</label>
+            <input type="tel" class="form-control" name="phone_number" id="phone_number">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>It's fancy!</h2>
+      <p>You've never seen an app this fancy. Making the app fancy was never on the backlog, it was always in progress. We have a dedicated team of testers ensuring it meets our self imposed fanciness standards.</p>
+    </div>
+    <div class="col-md-4">
+      <h2>It's new!</h2>
+      <p>You've never seen an app like this before because it's totally new. We've barely seen it, it's that new. And for one glorious moment it will be the newest thing in the world available to you.</p>
+   </div>
+    <div class="col-md-4">
+      <h2>It's an app</h2>
+      <p>Don't start fretting that we're going to release a fancy new banana or fancy new species of dog. We've definitely been working on an app. It's fancy, it's new, it's an app. What more could you want?</p>
+    </div>
+  </div>
+</div>
