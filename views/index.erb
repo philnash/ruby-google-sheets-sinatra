@@ -12,17 +12,26 @@
           <p class="bg-danger"><%= error_message %></p>
         <% end %>
         <form action="/" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name">
+          <div class="form-group<%= ' has-error' if user_details.errors.include?(:name) %>">
+            <label for="name" class="control-label">Name</label>
+            <input type="text" class="form-control" name="name" id="name" value="<%= user_details.name %>">
+            <% user_details.errors.full_messages_for(:name).each do |message| %>
+              <span class="help-block"><%= message %></span>
+            <% end %>
           </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" name="email" id="email">
+          <div class="form-group<%= ' has-error' if user_details.errors.include?(:email) %>">
+            <label for="email" class="control-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="email" value="<%= user_details.email %>">
+            <% user_details.errors.full_messages_for(:email).each do |message| %>
+              <span class="help-block"><%= message %></span>
+            <% end %>
           </div>
-          <div class="form-group">
-            <label for="phone_number">Phone number</label>
-            <input type="tel" class="form-control" name="phone_number" id="phone_number">
+          <div class="form-group<%= ' has-error' if user_details.errors.include?(:phone_number) %>">
+            <label for="phone_number" class="control-label">Phone number</label>
+            <input type="tel" class="form-control" name="phone_number" id="phone_number" value="<%= user_details.phone_number %>">
+            <% user_details.errors.full_messages_for(:phone_number).each do |message| %>
+              <span class="help-block"><%= message %></span>
+            <% end %>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
