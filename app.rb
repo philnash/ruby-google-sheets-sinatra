@@ -3,7 +3,6 @@ Bundler.require
 
 class PhoneNumberValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    return if value.blank?
     lookups_client = Twilio::REST::LookupsClient.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
     begin
       response = lookups_client.phone_numbers.get(value)
