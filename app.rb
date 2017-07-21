@@ -3,11 +3,10 @@ Bundler.require
 
 class PhoneNumberValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    lookups_client = Twilio::REST::LookupsClient.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
+    client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
     begin
-      response = lookups_client.phone_numbers.get(value)
-      response.phone_number
-    rescue Twilio::REST::RequestError => error
+      response = client.lookups.phone_numbers(value).fetch
+    rescue Twilio::REST::RestError => error
       if error.code == 20404
         record.errors[attribute] << (options[:message] || 'is not a valid phone number')
       else
