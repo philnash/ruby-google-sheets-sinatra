@@ -49,7 +49,8 @@ post "/" do
       erb :thanks
     rescue
       erb :index, locals: {
-        error_message: "Your details could not be saved, please try again."
+        error_message: "Your details could not be saved, please try again.",
+        user_details: user_details
       }
     end
   else
