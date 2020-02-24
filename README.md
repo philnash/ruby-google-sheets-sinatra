@@ -25,4 +25,11 @@ Install the dependencies:
 bundle install
 ```
 
-### Wait for the blog post to see what's next...
+### Read the blog post!
+
+Follow the instructions to [create a landing page with Sinatra, Google Spreadsheets, and Ruby](https://www.twilio.com/blog/2017/03/create-a-landing-page-with-sinatra-google-spreadsheets-and-ruby.html).
+
+You can also inspect the final code in the [save-data](https://github.com/philnash/ruby-google-sheets-sinatra/tree/save-data) branch.
+
+Want to take it further? Learn how to [validate Ruby objects with Active Model Validations](https://www.twilio.com/blog/2017/06/validate-ruby-objects-with-active-model-validations.html) and see how it applies in the [validations](https://github.com/philnash/ruby-google-sheets-sinatra/tree/validations) branch.
+
